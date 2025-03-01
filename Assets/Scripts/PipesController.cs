@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PipesController : MonoBehaviour
 {
@@ -9,7 +11,8 @@ public class PipesController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        //logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        //float score = logic.GetComponent;
     }
 
     // Update is called once per frame
@@ -23,14 +26,12 @@ public class PipesController : MonoBehaviour
             Debug.Log("Pipe Deleted");
             Destroy(gameObject);
         }
-    }
 
-    public void increaseDifficulty()
-    {
-        if (logic.playerScore > difficultyLevel)
+        if (logic.playerScore >= difficultyLevel)
         {
-            moveSpeed += 10;
+            moveSpeed += 3;
             difficultyLevel += 10;
+            Debug.Log($"Difficulty Level = {difficultyLevel}, Speed = {moveSpeed}");
         }
     }
 }
