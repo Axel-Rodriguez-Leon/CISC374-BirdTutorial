@@ -6,16 +6,27 @@ public class SpawnController : MonoBehaviour
     public float spawnRate = 2;
     private float timer = 0;
     public float heightOffset = 10;
+    public LogicScript logic;
+    private float playerDifficulty = 10;
+    //public PipesController pipesController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        //pipesController = GameObject.FindGameObjectWithTag("Pipes").GetComponent<PipesController>();
         spawnPipe();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (logic.playerScore >= playerDifficulty)
+        {
+            spawnRate = Mathf.Max(0.5f, spawnRate - 0.05f * Time.deltaTime);
+            playerDifficulty += 10;
+            Debug.Log($"Spawn Rate: {spawnRate}");
+        }
         if (timer < spawnRate) 
         {
             timer += Time.deltaTime;

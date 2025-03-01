@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1416637103035985754}
   m_Layer: 0
   m_Name: Pipes
-  m_TagString: Untagged
+  m_TagString: Pipes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   deadZone: -45
+  logic: {fileID: 0}
 --- !u!1 &4213387789724280958
 GameObject:
   m_ObjectHideFlags: 0
