@@ -23,7 +23,7 @@ public class SpawnController : MonoBehaviour
     {
         if (logic.playerScore >= playerDifficulty)
         {
-            spawnRate = Mathf.Max(0.5f, spawnRate - 0.05f * Time.deltaTime);
+            spawnRate = Mathf.Max(0.5f, spawnRate - 0.2f); ;
             playerDifficulty += 10;
             Debug.Log($"Spawn Rate: {spawnRate}");
         }

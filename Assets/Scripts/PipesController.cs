@@ -11,8 +11,7 @@ public class PipesController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        //float score = logic.GetComponent;
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
