@@ -14,10 +14,13 @@ public class LogicScript : MonoBehaviour
     public Text highText;
     public AudioSource deathSound;
     public AudioSource backgroundMusic;
+    public AudioSource titleBackgroundMusic;
+    public AudioSource highScoreSound;
 
     public void Start()
     {
         titleScreen.SetActive(true);
+        titleBackgroundMusic.Play();
         highScore = PlayerPrefs.GetInt("HighScore", 0);
         highText.text = "High: " + highScore.ToString();
         Time.timeScale = 0;
@@ -34,6 +37,8 @@ public class LogicScript : MonoBehaviour
     {
         titleScreen.SetActive(false);
         Time.timeScale = 1;
+        titleBackgroundMusic.Pause();
+        backgroundMusic.Play();
     }
     
     public void gameOver()
@@ -46,7 +51,6 @@ public class LogicScript : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
     }
 
     public void updateHigh()
@@ -56,6 +60,7 @@ public class LogicScript : MonoBehaviour
             highScore = playerScore;
             PlayerPrefs.SetInt("HighScore", highScore);
             highText.text = "High: " + highScore.ToString();
+            highScoreSound.Play();
         }
     }
 }
