@@ -2,5 +2,5 @@
 This is a tutorial project used to overview Unity3D in CISC374.
 
 Credits:
-_RPG Essentials Sound Effects_ by leohpaz (https://assetstore.unity.com/packages/audio/sound-fx/rpg-essentials-sound-effects-free-227708)
-_8Bit Music - 062022_ by GWriterStudio (https://assetstore.unity.com/packages/audio/music/8bit-music-062022-225623)
+- _RPG Essentials Sound Effects_ by leohpaz (https://assetstore.unity.com/packages/audio/sound-fx/rpg-essentials-sound-effects-free-227708)
+- _8Bit Music - 062022_ by GWriterStudio (https://assetstore.unity.com/packages/audio/music/8bit-music-062022-225623)
